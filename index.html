@@ -3,9 +3,335 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              spacing: {
+                "big": '32rem',
+              }
+            }
+          }
+        }
+      </script>
     <title>Tameem Uz Zaman</title>
 </head>
-<body>
-    <h1>Under Construction!!!</h1>
+<body class="bg-blue-950">
+    <div>
+        <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+          <div class="flex lg:flex-1">
+            <a href="#" class="-m-1.5 p-1.5">
+                <img class="h-8 w-auto rounded-full" src="../tameem786.github.io/resources/profile-head.jpg" alt="">
+            </a>
+            <span class="px-8 text-lg font-semibold leading-6 text-slate-100">Tameem Uz Zaman</span>
+          </div>
+
+          <div class="hidden lg:flex lg:gap-x-12">
+            <a href="#about" class="text-sm font-semibold leading-6 text-slate-100">About Me</a>
+            <a href="#education" class="text-sm font-semibold leading-6 text-slate-100">Education</a>
+            <a href="#experience" class="text-sm font-semibold leading-6 text-slate-100">Experience</a>
+            <a href="#project" class="text-sm font-semibold leading-6 text-slate-100">Projects</a>
+            <!-- <a href="#" class="text-sm font-semibold leading-6 text-slate-100">Skills</a> -->
+          </div>
+        </nav>
+        <div class="lg:hidden" role="dialog" aria-modal="true">
+          <div class="fixed inset-0 z-10"></div>
+          <div class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-blue-950 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+            <div class="flex items-center justify-between">
+              <a href="#" class="-m-1.5 p-1.5">
+                <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">
+              </a>
+              <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+                <span class="sr-only">Close menu</span>
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <div class="mt-6 flow-root">
+              <div class="-my-6 divide-y divide-gray-500/10">
+                <div class="space-y-2 py-6">
+                  <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-100 hover:bg-blue-900">About Me</a>
+                  <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-100 hover:bg-blue-900">Education</a>
+                  <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-100 hover:bg-blue-900">Experience</a>
+                  <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-100 hover:bg-blue-900">Projects</a>
+                  <!-- <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-100 hover:bg-blue-900">Skills</a> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="flex flex-wrap justify-around" id="about">
+        <div class="flex flex-col justify-center items-center text-slate-100">
+            <div class="">
+                <p class="text-2xl">Hi, I'm Tameem Uz Zaman</p>
+            </div>
+            <div class="">
+                <p>A Software Developer</p>
+            </div>
+            <div class="mt-5 flex gap-5">
+                <div class="bg-cyan-500 shadow-lg shadow-cyan-500/50 p-1 px-2 rounded font-semibold" >
+                    <a href="https://www.linkedin.com/in/tameem-turag-507791147" target="_blank">LinkedIn</a>
+                </div>
+                <div class="bg-blue-500 shadow-lg shadow-blue-500/50 p-1 px-2 rounded font-semibold" >
+                    <a href="https://github.com/Tameem786" target="_blank">Github</a>
+                </div>
+                <div class="bg-pink-500 shadow-lg shadow-pink-500/50 p-1 px-2 rounded font-semibold" >
+                    <a href="mailto:tameemturag@gmail.com">Email</a>
+                </div>
+                <div class="bg-indigo-500 shadow-lg shadow-indigo-500/50 p-1 px-2 rounded font-semibold" >
+                    <a href="../tameem786.github.io/resources/Tameem-CV.pdf" target="_blank">Download my CV</a>
+                </div>
+            </div>
+        </div>
+        <div class="">
+            <div class="">
+                <img class="drop-shadow-xl rounded-lg backdrop-contrast-200" src="../tameem786.github.io/resources/profile-edit.png" alt="">
+            </div>
+        </div>
+    </div>
+    
+    <div class="flex justify-center mt-20" id="education">
+        <div class="text-2xl text-slate-100 underline">
+            <p>Education Background</p>
+        </div>
+    </div>
+
+    <div class="flex flex-wrap">
+
+        <div class="p-4 sm:w-1/2 lg:w-1/3">
+            <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+                <div class="h-full p-6 hover:bg-indigo-700 hover:text-white transition duration-300 ease-in">
+                    <h2 class="text-base font-medium text-indigo-300 mb-1"> University of Technology Malaysia </h2>
+                    <h1 class="text-lg font-semibold mb-3"> 
+                        Bachelor of Computer Science (Computer Networks & Security) <br>
+                        Graduated on March 2023 <br>
+                        CGPA 3.7/4.0 (Top 1.5%)
+                    </h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="p-4 sm:w-1/2 lg:w-1/3">
+            <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+                <div class="h-full p-6 hover:bg-indigo-700 hover:text-white transition duration-300 ease-in">
+                    <h2 class="text-base font-medium text-indigo-300 mb-1"> Core Courses Taken </h2>
+                    <h1 class="text-lg font-semibold mb-3"> 
+                        Programming Technnique 1&2 - A <br>
+                        Object Oriented Programming - A+ <br>
+                        Data Structure & Algorithms - A <br>
+                        Computational Mathematics (Calculus) - A <br>
+                        Cryptography - A <br>
+                        Computer Security - A
+                    </h1>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="p-4 sm:w-1/2 lg:w-1/3">
+            <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+                <div class="h-full p-6 hover:bg-indigo-700 hover:text-white transition duration-300 ease-in">
+                    <h2 class="text-base font-medium text-indigo-300 mb-1"> Achievements </h2>
+                    <h1 class="text-lg font-semibold mb-3"> 
+                        Dean's Award <br>
+                        Dean's List Award <br>
+                        IMDC MALAYSIA 2022 (RUNNER'S UP) <br>
+                        NASA SPACE APP CHALLENGE 2019 (RUNNER'S UP)
+                    </h1>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="flex justify-center mt-10" id="experience">
+        <div class="text-2xl text-slate-100 underline">
+            <p>Work Experience</p>
+        </div>
+    </div>
+
+    <div class="flex flex-wrap">
+
+        <div class="p-4 sm:w-1/2 lg:w-1/3">
+            <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+                <div class="h-full p-6 hover:bg-indigo-700 hover:text-white transition duration-300 ease-in">
+                    <h2 class="font-medium text-indigo-300 mb-1"> 
+                        <div class="text-base flex flex wrap justify-between">
+                            <div>SOFTWARE DEVELOPER</div>
+                            <div>May 2023 - Nov 2023</div>
+                        </div>
+                        <p class="text-xs">Wavelet Solutions Sdn Bhd, Kuala Lumpur, Malaysia</p>
+                    </h2>
+                    <h1 class="text-lg font-semibold mb-3"> 
+                        <p class="underline underline-offset-2">Developed Web Applications using Springboot.</p>
+                        <p class="underline underline-offset-2">Used Angular, NgRx for Front-end developing.</p>
+                        <p class="underline underline-offset-2"> Used Postman to test APIs.</p>
+                        <p class="underline underline-offset-2">Used Jira for issue ticketing.</p>
+                        <p class="underline underline-offset-2">Use JUnit Test to test Java backend codes.</p>
+                    </h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="p-4 sm:w-1/2 lg:w-1/3">
+            <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+                <div class="h-full p-6 hover:bg-indigo-700 hover:text-white transition duration-300 ease-in">
+                    <h2 class="font-medium text-indigo-300 mb-1"> 
+                        <div class="text-base flex flex wrap justify-between">
+                            <div>SECURITY ANALYST INTERN</div>
+                            <div>Oct 2022 - Feb 2023</div>
+                        </div>
+                        <p class="text-xs">Firmus Sdn Bhd, Kuala Lumpur, Malaysia</p>
+                    </h2>
+                    <h1 class="text-lg font-semibold mb-3"> 
+                        <p class="underline underline-offset-2">Network Penetration testing using Nmap tool.</p>
+                        <p class="underline underline-offset-2">Web application Penetration testing using Nessus and burp suit.</p>
+                        <p class="underline underline-offset-2">Mobile Penetration testing using adb tool.</p>
+                        <p class="underline underline-offset-2">Writing detailed reports on vulnerability assessment.</p>
+                    </h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="p-4 sm:w-1/2 lg:w-1/3">
+            <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+                <div class="h-full p-6 hover:bg-indigo-700 hover:text-white transition duration-300 ease-in">
+                    <h2 class="font-medium text-indigo-300 mb-1"> 
+                        <div class="text-base flex flex wrap justify-between">
+                            <div>RESEARCH ASSISTANT</div>
+                            <div>Oct 2022 - Feb 2023</div>
+                        </div>
+                        <p class="text-xs">AI Research Lab, UTM, Johor, Malaysia</p>
+                    </h2>
+                    <h1 class="text-lg font-semibold mb-3"> 
+                        <p class="underline underline-offset-2">Worked under Dr. Madni's supervision.</p>
+                        <p class="underline underline-offset-2">Taught juniors C++, Python, R Programming.</p>
+                        <p class="underline underline-offset-2">Assisted other students in developing their projects.</p>
+                        <p class="underline underline-offset-2">Used PyTorch to build neural networks with the
+                            help of optimized algorithms.</p>
+                    </h1>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="flex justify-center mt-10" id="project">
+        <div class="text-2xl text-slate-100 underline">
+            <p>Projects</p>
+        </div>
+    </div>
+
+    <div class="flex flex-wrap justify-center">
+        <div class="p-4 sm:w-1/2 lg:w-1/3">
+            <div class="h-full rounded-lg overflow-hidden">
+                <div class="h-full p-6 bg-blue-800">
+                    <h2 class="font-medium text-indigo-300 mb-1"> 
+                        <div class="text-base">
+                            <div>Ecommerce Application</div>
+                        </div>
+                        <p class="text-xs">An Ecommerce website using Angular, Typescript for Front-End and NodeJS for Backend.</p>
+                    </h2>
+                    <div class="flex flex-wrap gap-1 text-xs">
+                        <div class="bg-cyan-500 p-1 rounded">Node.js</div>
+                        <div class="bg-cyan-500 p-1 rounded">MongoDB</div>
+                        <div class="bg-cyan-500 p-1 rounded">Postman API</div>
+                        <div class="bg-cyan-500 p-1 rounded">Stripe</div>
+                        <div class="bg-cyan-500 p-1 rounded">AngularJS</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="p-4 sm:w-1/2 lg:w-1/3">
+            <div class="h-full rounded-lg overflow-hidden">
+                <div class="h-full p-6 bg-blue-800">
+                    <h2 class="font-medium text-indigo-300 mb-1"> 
+                        <div class="text-base">
+                            <div>Ecommerce-Backend</div>
+                        </div>
+                        <p class="text-xs">Develop backend server using NodeJS.</p>
+                    </h2>
+                    <div class="flex flex-wrap gap-1 text-xs">
+                        <div class="bg-cyan-500 p-1 rounded">REST API</div>
+                        <div class="bg-cyan-500 p-1 rounded">Node.js</div>
+                        <div class="bg-cyan-500 p-1 rounded">Postman API</div>
+                        <div class="bg-cyan-500 p-1 rounded">MongoDB</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="p-4 sm:w-1/2 lg:w-1/3">
+            <div class="h-full rounded-lg overflow-hidden">
+                <div class="h-full p-6 bg-blue-800">
+                    <h2 class="font-medium text-indigo-300 mb-1"> 
+                        <div class="text-base">
+                            <div>Food-Chain Web Development</div>
+                        </div>
+                        <p class="text-xs">This website is build to provide food supply among students.
+                            Backend (PHP Laravel Framwork with MySQL database).</p>
+                    </h2>
+                    <div class="flex flex-wrap gap-1 text-xs">
+                        <div class="bg-cyan-500 p-1 rounded">Laravel</div>
+                        <div class="bg-cyan-500 p-1 rounded">MySQL</div>
+                        <div class="bg-cyan-500 p-1 rounded">PHP</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="p-4 sm:w-1/2 lg:w-1/3">
+            <div class="h-full rounded-lg overflow-hidden">
+                <div class="h-full p-6 bg-blue-800">
+                    <h2 class="font-medium text-indigo-300 mb-1"> 
+                        <div class="text-base">
+                            <div>Spring-Boot-Reactive</div>
+                        </div>
+                        <p class="text-xs">A application for describing the difference between spring MVC and webFlux.</p>
+                    </h2>
+                    <div class="flex flex-wrap gap-1 text-xs">
+                        <div class="bg-cyan-500 p-1 rounded">Reactive Programming</div>
+                        <div class="bg-cyan-500 p-1 rounded">Spring WebFlux</div>
+                        <div class="bg-cyan-500 p-1 rounded">REST APIs</div>
+                        <div class="bg-cyan-500 p-1 rounded">Java</div>
+                        <div class="bg-cyan-500 p-1 rounded">Spring Boot</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="p-4 sm:w-1/2 lg:w-1/3">
+            <div class="h-full rounded-lg overflow-hidden">
+                <div class="h-full p-6 bg-blue-800">
+                    <h2 class="font-medium text-indigo-300 mb-1"> 
+                        <div class="text-base">
+                            <div>UTM - Industrial Training System</div>
+                        </div>
+                        <p class="text-xs">This is a Mobile Application which help students to find their internships. This project is built with Flutter and Firebase database.</p>
+                    </h2>
+                    <div class="flex flex-wrap gap-1 text-xs">
+                        <div class="bg-cyan-500 p-1 rounded">Flutter</div>
+                        <div class="bg-cyan-500 p-1 rounded">Dart</div>
+                        <div class="bg-cyan-500 p-1 rounded">Firebase</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="flex justify-center mt-10" id="projects">
+        <div class="text-2xl text-slate-100 underline">
+            <p>Skills</p>
+        </div>
+    </div> -->
+
+    <div class="flex flex-wrap justify-center my-10">
+        <p class="text-2xl text-slate-100">Thank You for Visiting my Website.</p>
+    </div>
 </body>
 </html>
