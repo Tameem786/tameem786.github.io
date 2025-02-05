@@ -3,329 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
-    <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-              spacing: {
-                "big": '32rem',
-              }
-            }
-          }
+    <title>Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
         }
-      </script>
-    <title>Tameem Uz Zaman</title>
-</head>
-<body class="bg-blue-950">
-    <div>
-        <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
-          <div class="flex lg:flex-1">
-            <a href="#" class="-m-1.5 p-1.5">
-                <img class="h-8 w-auto rounded-full" src="resources/profile-head.jpg" alt="">
-            </a>
-            <span class="px-8 text-lg font-semibold leading-6 text-slate-100">Tameem Uz Zaman</span>
-          </div>
 
-          <div class="hidden lg:flex lg:gap-x-12">
-            <a href="#about" class="text-sm font-semibold leading-6 text-slate-100">About Me</a>
-            <a href="#education" class="text-sm font-semibold leading-6 text-slate-100">Education</a>
-            <a href="#experience" class="text-sm font-semibold leading-6 text-slate-100">Experience</a>
-            <a href="#project" class="text-sm font-semibold leading-6 text-slate-100">Projects</a>
-            <!-- <a href="#" class="text-sm font-semibold leading-6 text-slate-100">Skills</a> -->
-          </div>
-        </nav>
-        <div class="lg:hidden" role="dialog" aria-modal="true">
-          <div class="fixed inset-0 z-10"></div>
-          <div class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-blue-950 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-            <div class="flex items-center justify-between">
-              <a href="#" class="-m-1.5 p-1.5">
-                <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">
-              </a>
-              <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
-                <span class="sr-only">Close menu</span>
-                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
+        nav {
+            background-color: #333;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+        }
+
+        .row-1 {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .intro {
+            flex: 2;
+        }
+
+        .profile-pic {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .profile-pic img {
+            width: 15rem;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .row-2 {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 2rem;
+        }
+
+        .projects {
+            border-radius: 10px;
+        }
+
+        .scroll-container {
+            max-height: 200px;
+            overflow-y: auto;
+            padding: 0 1rem;
+            background-color: white;
+            border-radius: 5px;
+            margin-top: 1rem;
+        }
+
+        .project-card {
+            background-color: white;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .story {
+            display: flex;
+            font-size: 16px;
+            padding-bottom: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .row-1 {
+                flex-direction: column;
+            }
+
+            .row-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @keyframes blink {
+          0% { opacity: 1; }
+          50% { opacity: 0; }
+          100% { opacity: 1; }
+        }
+
+        .blink-text {
+          animation: blink 2s linear infinite;
+        }
+    </style>
+</head>
+<body>
+<!--    <nav>-->
+<!--        <ul>-->
+<!--            <li><a href="#about">About</a></li>-->
+<!--            <li><a href="#research">Research</a></li>-->
+<!--            <li><a href="#projects">Projects</a></li>-->
+<!--        </ul>-->
+<!--    </nav>-->
+
+    <div class="container">
+        <div class="row-1">
+            <div class="intro">
+                <h1>Tameem Uz Zaman</h1>
+                <p style="padding: 0.5rem 0; color: #949494">AI Researcher</p>
+                <p style="padding-top: 1rem">Research Interests: Swarm Robotics, Generative AI, LLMs, and Embodied AI.</p>
+                <p style="padding-top: 1rem">Current Research: Optimizing NEAT in Swarm Robotics.</p>
+                <p style="padding-top: 1rem">Skills: Python, C++, Java, PyTorch, CUDA.</p>
+                <div style="display: flex; padding-top: 1.5rem; justify-content: space-around">
+                  <p style="text-decoration: underline">GitHub</p>
+                  <p style="text-decoration: underline">LinkedIn</p>
+                  <p style="text-decoration: underline">Resume</p>
+                </div>
+              <p class="blink-text" style="padding-top: 1.5rem; font-style: italic; color: #000fd3; font-weight: bold">Looking for PhD Oppurtunities!</p>
             </div>
-            <div class="mt-6 flow-root">
-              <div class="-my-6 divide-y divide-gray-500/10">
-                <div class="space-y-2 py-6">
-                  <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-100 hover:bg-blue-900">About Me</a>
-                  <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-100 hover:bg-blue-900">Education</a>
-                  <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-100 hover:bg-blue-900">Experience</a>
-                  <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-100 hover:bg-blue-900">Projects</a>
-                  <!-- <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-100 hover:bg-blue-900">Skills</a> -->
+            <div class="profile-pic">
+                <img src="resources/profile-edit.png" alt="Profile Picture">
+            </div>
+        </div>
+
+        <div class="row-2">
+            <div class="projects">
+              <h2>What's happening?</h2>
+              <hr>
+              <div class="scroll-container">
+                <div class="story">
+                  <p style="font-weight: bold">03/01/2025:</p>
+                  <p style="padding-left: 0.2rem">I got nominated for the Student Employee of the Year Award.</p>
+                </div>
+                <div class="story">
+                  <p style="font-weight: bold">27/12/2024:</p>
+                  <p style="padding-left: 0.2rem">My first-authored paper got accepted at AAAI 2025.</p>
+                </div>
+                <div class="story">
+                  <p style="font-weight: bold">24/12/2024:</p>
+                  <p style="padding-left: 0.2rem">My first-authored paper got accepted at AAAS 2025.</p>
+                </div>
+                <div class="story">
+                  <p style="font-weight: bold">20/12/2024:</p>
+                  <p style="padding-left: 0.2rem">First semester completed with CGPA 3.75, scored top 1% in Reinforcement Learning class among 30 students.</p>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-    </div>
-    <div class="flex flex-wrap justify-around" id="about">
-        <div class="flex flex-col justify-center items-center text-slate-100">
-            <div class="">
-                <p class="text-2xl">Hi, I'm Tameem Uz Zaman</p>
+            <div class="projects">
+                <h2>Research Projects</h2>
+                <hr>
+                <div class="project-card">
+                    <h3>Training Adaptive Foraging Behavior for Robot Swarms Using Distributed Neuroevolution of Augmented Topologies</h3>
+                    <p style="font-style: italic">Tameem Uz Zaman, Pigar Biteng, Eric Rodriguez and Qi Lu | AAAI 2025</p>
+                </div>
             </div>
-            <div class="">
-                <p>A Software Developer</p>
-            </div>
-            <div class="mt-5 flex gap-5">
-                <div class="bg-cyan-500 shadow-lg shadow-cyan-500/50 p-1 px-2 rounded font-semibold" >
-                    <a href="https://www.linkedin.com/in/tameem-turag-507791147" target="_blank">LinkedIn</a>
-                </div>
-                <div class="bg-blue-500 shadow-lg shadow-blue-500/50 p-1 px-2 rounded font-semibold" >
-                    <a href="https://github.com/Tameem786" target="_blank">Github</a>
-                </div>
-                <div class="bg-pink-500 shadow-lg shadow-pink-500/50 p-1 px-2 rounded font-semibold" >
-                    <a href="mailto:tameemturag@gmail.com">Email</a>
-                </div>
-                <div class="bg-indigo-500 shadow-lg shadow-indigo-500/50 p-1 px-2 rounded font-semibold" >
-                    <a href="resources/Tameem-resume.pdf" target="_blank">Download Resume</a>
+            <div class="projects">
+                <h2>Personal Projects</h2>
+                <div class="project-card">
+                    <h3>Coming Up...</h3>
+<!--                    <p>Description of personal project 1...</p>-->
                 </div>
             </div>
         </div>
-        <div class="">
-            <div class="">
-                <img class="drop-shadow-xl rounded-lg backdrop-contrast-200" src="resources/profile-edit.png" alt="">
-            </div>
-        </div>
-    </div>
-    
-    <div class="flex justify-center mt-20" id="education">
-        <div class="text-2xl text-slate-100 underline">
-            <p>Education Background</p>
-        </div>
-    </div>
-
-    <div class="flex flex-wrap">
-
-        <div class="p-4 sm:w-1/2 lg:w-1/3">
-            <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-                <div class="h-full p-6 hover:bg-indigo-700 hover:text-white transition duration-300 ease-in">
-                    <h2 class="text-base font-medium text-indigo-300 mb-1"> University of Texas Rio Grande Valley (UTRGV) </h2>
-                    <h1 class="text-lg font-semibold mb-3"> 
-                        MS in Computer Science <br>
-                        Fall 2024 - Fall 2026 (Expected Graduation) <br>
-                        Enrolled Courses -  Reinforcement Learning, Digital Image Processing, Theory of Computation
-                    </h1>
-                </div>
-            </div>
-        </div>
-
-        <div class="p-4 sm:w-1/2 lg:w-1/3">
-            <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-                <div class="h-full p-6 hover:bg-indigo-700 hover:text-white transition duration-300 ease-in">
-                    <h2 class="text-base font-medium text-indigo-300 mb-1"> University of Technology Malaysia </h2>
-                    <h1 class="text-lg font-semibold mb-3"> 
-                        Bachelor of Computer Science (Computer Networks & Security) <br>
-                        Graduated on March 2023 <br>
-                        CGPA 3.7/4.0 (Top 1.5%)
-                    </h1>
-                </div>
-            </div>
-        </div>
-
-        <div class="p-4 sm:w-1/2 lg:w-1/3">
-            <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-                <div class="h-full p-6 hover:bg-indigo-700 hover:text-white transition duration-300 ease-in">
-                    <h2 class="text-base font-medium text-indigo-300 mb-1"> Achievements </h2>
-                    <h1 class="text-lg font-semibold mb-3"> 
-                        Dean's Award <br>
-                        Dean's List Award <br>
-                        IMDC MALAYSIA 2022 (RUNNER'S UP) <br>
-                        NASA SPACE APP CHALLENGE 2019 (RUNNER'S UP)
-                    </h1>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    <div class="flex justify-center mt-10" id="experience">
-        <div class="text-2xl text-slate-100 underline">
-            <p>Work Experience</p>
-        </div>
-    </div>
-
-    <div class="flex flex-wrap">
-
-        <div class="p-4 sm:w-1/2 lg:w-1/3">
-            <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-                <div class="h-full p-6 hover:bg-indigo-700 hover:text-white transition duration-300 ease-in">
-                    <h2 class="font-medium text-indigo-300 mb-1"> 
-                        <div class="text-base flex flex wrap justify-between">
-                            <div>GRADUATE RESEARCH ASSISTANT</div>
-                            <div>Sep 2024 - Current</div>
-                        </div>
-                        <p class="text-xs">MARS Lab, UTRGV</p>
-                    </h2>
-                    <h1 class="text-lg font-semibold mb-3"> 
-                        <p class="underline underline-offset-2">Research on Deep Learning in Swarm Robotics</p>
-                        <p class="underline underline-offset-2">Train model to run robot simulation in Python and JAVA</p>
-                        <p class="underline underline-offset-2">Code in C++ to simulate the robots in Argos3 simualtion</p>
-                        <p class="underline underline-offset-2">Work as a TA for Data Structure & Algorithms class.</p>
-                    </h1>
-                </div>
-            </div>
-        </div>
-
-        <div class="p-4 sm:w-1/2 lg:w-1/3">
-            <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-                <div class="h-full p-6 hover:bg-indigo-700 hover:text-white transition duration-300 ease-in">
-                    <h2 class="font-medium text-indigo-300 mb-1"> 
-                        <div class="text-base flex flex wrap justify-between">
-                            <div>SOFTWARE DEVELOPER INTERN</div>
-                            <div>May 2023 - Nov 2023</div>
-                        </div>
-                        <p class="text-xs">Wavelet Solutions Sdn Bhd, Kuala Lumpur, Malaysia</p>
-                    </h2>
-                    <h1 class="text-lg font-semibold mb-3"> 
-                        <p class="underline underline-offset-2">Reduced the EC2 usage, which helped the company to save $60,000/year.</p>
-                        <p class="underline underline-offset-2">Created test automation using TestNg and API documentation using WriterSide.</p>
-                        <p class="underline underline-offset-2"> Added indexing in PostgreSQL, increased the speed of database query by 10%.</p>
-                        <p class="underline underline-offset-2">UCollaborated in an agile manner with cross functional team sprints, participated in 100% of daily scrums.</p>
-                    </h1>
-                </div>
-            </div>
-        </div>
-
-        <div class="p-4 sm:w-1/2 lg:w-1/3">
-            <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-                <div class="h-full p-6 hover:bg-indigo-700 hover:text-white transition duration-300 ease-in">
-                    <h2 class="font-medium text-indigo-300 mb-1"> 
-                        <div class="text-base flex flex wrap justify-between">
-                            <div>SECURITY ANALYST INTERN</div>
-                            <div>Oct 2022 - Feb 2023</div>
-                        </div>
-                        <p class="text-xs">Firmus Sdn Bhd, Kuala Lumpur, Malaysia</p>
-                    </h2>
-                    <h1 class="text-lg font-semibold mb-3"> 
-                        <p class="underline underline-offset-2">Performed 2 onsite network penetration testing in every week.</p>
-                        <p class="underline underline-offset-2">Used “Fastest” crawl strategy to increased web application vulnerability scanning by 20%.</p>
-                        <p class="underline underline-offset-2">Delivered 5 reports for the findings in every week.</p>
-                        <p class="underline underline-offset-2">Gave 100% attendance.</p>
-                    </h1>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    <div class="flex justify-center mt-10" id="project">
-        <div class="text-2xl text-slate-100 underline">
-            <p>Projects</p>
-        </div>
-    </div>
-
-    <div class="flex flex-wrap justify-center">
-        <div class="p-4 sm:w-1/2 lg:w-1/3">
-            <div class="h-full rounded-lg overflow-hidden">
-                <div class="h-full p-6 bg-blue-800">
-                    <h2 class="font-medium text-indigo-300 mb-1"> 
-                        <div class="text-base">
-                            <div>Ecommerce Application</div>
-                        </div>
-                        <p class="text-xs">An Ecommerce website using Angular, Typescript for Front-End and NodeJS for Backend.</p>
-                    </h2>
-                    <div class="flex flex-wrap gap-1 text-xs">
-                        <div class="bg-cyan-500 p-1 rounded">Node.js</div>
-                        <div class="bg-cyan-500 p-1 rounded">MongoDB</div>
-                        <div class="bg-cyan-500 p-1 rounded">Postman API</div>
-                        <div class="bg-cyan-500 p-1 rounded">Stripe</div>
-                        <div class="bg-cyan-500 p-1 rounded">AngularJS</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="p-4 sm:w-1/2 lg:w-1/3">
-            <div class="h-full rounded-lg overflow-hidden">
-                <div class="h-full p-6 bg-blue-800">
-                    <h2 class="font-medium text-indigo-300 mb-1"> 
-                        <div class="text-base">
-                            <div>Ecommerce-Backend</div>
-                        </div>
-                        <p class="text-xs">Develop backend server using NodeJS.</p>
-                    </h2>
-                    <div class="flex flex-wrap gap-1 text-xs">
-                        <div class="bg-cyan-500 p-1 rounded">REST API</div>
-                        <div class="bg-cyan-500 p-1 rounded">Node.js</div>
-                        <div class="bg-cyan-500 p-1 rounded">Postman API</div>
-                        <div class="bg-cyan-500 p-1 rounded">MongoDB</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="p-4 sm:w-1/2 lg:w-1/3">
-            <div class="h-full rounded-lg overflow-hidden">
-                <div class="h-full p-6 bg-blue-800">
-                    <h2 class="font-medium text-indigo-300 mb-1"> 
-                        <div class="text-base">
-                            <div>Food-Chain Web Development</div>
-                        </div>
-                        <p class="text-xs">This website is build to provide food supply among students.
-                            Backend (PHP Laravel Framwork with MySQL database).</p>
-                    </h2>
-                    <div class="flex flex-wrap gap-1 text-xs">
-                        <div class="bg-cyan-500 p-1 rounded">Laravel</div>
-                        <div class="bg-cyan-500 p-1 rounded">MySQL</div>
-                        <div class="bg-cyan-500 p-1 rounded">PHP</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="p-4 sm:w-1/2 lg:w-1/3">
-            <div class="h-full rounded-lg overflow-hidden">
-                <div class="h-full p-6 bg-blue-800">
-                    <h2 class="font-medium text-indigo-300 mb-1"> 
-                        <div class="text-base">
-                            <div>Spring-Boot-Reactive</div>
-                        </div>
-                        <p class="text-xs">A application for describing the difference between spring MVC and webFlux.</p>
-                    </h2>
-                    <div class="flex flex-wrap gap-1 text-xs">
-                        <div class="bg-cyan-500 p-1 rounded">Reactive Programming</div>
-                        <div class="bg-cyan-500 p-1 rounded">Spring WebFlux</div>
-                        <div class="bg-cyan-500 p-1 rounded">REST APIs</div>
-                        <div class="bg-cyan-500 p-1 rounded">Java</div>
-                        <div class="bg-cyan-500 p-1 rounded">Spring Boot</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="p-4 sm:w-1/2 lg:w-1/3">
-            <div class="h-full rounded-lg overflow-hidden">
-                <div class="h-full p-6 bg-blue-800">
-                    <h2 class="font-medium text-indigo-300 mb-1"> 
-                        <div class="text-base">
-                            <div>UTM - Industrial Training System</div>
-                        </div>
-                        <p class="text-xs">This is a Mobile Application which help students to find their internships. This project is built with Flutter and Firebase database.</p>
-                    </h2>
-                    <div class="flex flex-wrap gap-1 text-xs">
-                        <div class="bg-cyan-500 p-1 rounded">Flutter</div>
-                        <div class="bg-cyan-500 p-1 rounded">Dart</div>
-                        <div class="bg-cyan-500 p-1 rounded">Firebase</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- <div class="flex justify-center mt-10" id="projects">
-        <div class="text-2xl text-slate-100 underline">
-            <p>Skills</p>
-        </div>
-    </div> -->
-
-    <div class="flex flex-wrap justify-center my-10">
-        <p class="text-2xl text-slate-100">Thank You for Visiting my Website.</p>
     </div>
 </body>
 </html>
