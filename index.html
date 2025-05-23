@@ -86,7 +86,7 @@
         .project-card {
             background-color: white;
             padding: 1rem;
-            margin-bottom: 1rem;
+            /* margin-bottom: 1rem; */
         }
 
         .story {
@@ -135,12 +135,12 @@
                 <h1>Tameem Uz Zaman</h1>
                 <p style="padding: 0.5rem 0; color: #949494">AI Researcher</p>
                 <p style="padding-top: 1rem">Research Interests: Swarm Robotics, Generative AI, LLMs, and Embodied AI.</p>
-                <p style="padding-top: 1rem">Current Research: Optimizing NEAT in Swarm Robotics.</p>
+                <p style="padding-top: 1rem">Current Research: Leveraging Federated Learning for Swarm Robotics.</p>
                 <p style="padding-top: 1rem">Skills: Python, C++, Java, PyTorch, CUDA.</p>
                 <div style="display: flex; padding-top: 1.5rem; justify-content: space-around">
                   <p style="text-decoration: underline;"><a href="https://github.com/Tameem786" target="_blank">GitHub</a></p>
                   <p style="text-decoration: underline"><a href="https://www.linkedin.com/in/tameem-turag-507791147" target="_blank">LinkedIn</a></p>
-                  <p style="text-decoration: underline"><a href="resources/Tameem-Resume.pdf" target="_blank">Resume</a></p>
+                  <p style="text-decoration: underline"><a href="resources/Resume.pdf" target="_blank">Resume</a></p>
                 </div>
               <p class="blink-text" style="padding-top: 1.5rem; font-style: italic; color: #000fd3; font-weight: bold">Looking for PhD Opportunities!</p>
             </div>
@@ -155,16 +155,20 @@
               <hr>
               <div class="scroll-container">
                 <div class="story">
+                    <p style="font-weight: bold">03/05/2025:</p>
+                    <p style="padding-left: 0.2rem; font-size: 15px">Our workshop paper got accepted at <i><u>ICRA 2025</u></i>.</p>
+                  </div>
+                <div class="story">
                   <p style="font-weight: bold">03/01/2025:</p>
                   <p style="padding-left: 0.2rem; font-size: 15px">I got nominated for the Student Employee of the Year Award.</p>
                 </div>
                 <div class="story">
                   <p style="font-weight: bold">27/12/2024:</p>
-                  <p style="padding-left: 0.2rem; font-size: 15px">My first-authored paper got accepted at AAAI 2025.</p>
+                  <p style="padding-left: 0.2rem; font-size: 15px">My first-authored paper got accepted at <i><u>AAAI 2025</u></i>.</p>
                 </div>
                 <div class="story">
                   <p style="font-weight: bold">24/12/2024:</p>
-                  <p style="padding-left: 0.2rem; font-size: 15px">My first-authored paper's abstract got accepted at AAAS 2025.</p>
+                  <p style="padding-left: 0.2rem; font-size: 15px">My first-authored paper's abstract got accepted at <i><u>AAAS 2025</u></i>.</p>
                 </div>
                 <div class="story">
                   <p style="font-weight: bold">20/12/2024:</p>
@@ -185,12 +189,12 @@
               </div>
             </div>
             <div class="projects">
-                <h2>Research Projects</h2>
+                <h2>Research Workshop Papers</h2>
                 <hr>
                 <div class="project-card">
                     <h3>Training Adaptive Foraging Behavior for Robot Swarms Using Distributed Neuroevolution of Augmented Topologies</h3>
                     <div style="display: flex; padding-top: 0.5rem">
-                        <p style="font-style: italic; color: #7b7379">Tameem Uz Zaman, Pigar Biteng, Eric Rodriguez and Qi Lu</p>
+                        <p style="font-style: italic; color: #7b7379"><u>Tameem Uz Zaman</u>, Pigar Biteng, Eric Rodriguez and Qi Lu</p>
                         <p style="padding-left: 0.5rem; font-size: 14px">| AAAI 2025 [Acceptance Rate 23.4%]</p>
                     </div>
                     <div style="font-size: 15px; display: flex; width: 20%; justify-content: space-between; text-decoration: underline; padding-top: 0.3rem;">
@@ -199,13 +203,48 @@
                         <p><a href="https://drive.google.com/file/d/11CB_vWM2RVbA2SlVbbLPHvbOd6ui79RE/view?usp=sharing" target="_blank">Poster</a></p>
                     </div>
                 </div>
+                <div class="project-card">
+                    <h3>Training Robot Swarms for Adaptive Foraging in Environments with Obstacles</h3>
+                    <div style="display: flex; padding-top: 0.5rem">
+                        <p style="font-style: italic; color: #7b7379">Pigar Biteng, <u>Tameem Uz Zaman</u> and and Qi Lu</p>
+                        <p style="padding-left: 0.5rem; font-size: 14px">| ICRA 2025 [Acceptance Rate 39.0%]</p>
+                    </div>
+                    <div style="font-size: 15px; display: flex; width: 12%; justify-content: space-between; text-decoration: underline; padding-top: 0.3rem;">
+                        <p><a href="https://github.com/MARSLab-UTRGV/neatfa-tameem/tree/Pigar-Semi-Cluster-Training" target="_blank">Code</a></p>
+                        <p><a href="https://dartmouthrobotics.github.io/icra-2025-robots-wild/papers" target="_blank">Paper</a></p>
+                        <!-- <p><a href="" target="_blank"></a></p> -->
+                    </div>
+                </div>
             </div>
             <div class="projects">
                 <h2>Personal Projects</h2>
+                <hr>
                 <div class="project-card">
-                    <h3>Under Construction!!!</h3>
-<!--                    <p>Description of personal project 1...</p>-->
+                    <h3>Medical Image Segmentation on COVID CT Scans using UNet</h3>
+                    <p style="padding: 0.5rem 0; color: #666">Implemented and evaluated an UNet model on COVID CT Scan images. Implemented a Dice Score Evaluation to get the best segmentation model. Leveraged PyTorch's automatic mixed precision method to speed up training and reduce GPU memory usage. Performed 5-Fold Cross Validation which provides reliable model performance.</p>
+                    <div style="font-size: 15px; display: flex; width: 15%; justify-content: space-between; text-decoration: underline; padding-top: 0.3rem;">
+                        <p><a href="https://github.com/Tameem786/Image_Seg_Covid_CT_Scans" target="_blank">Code</a></p>
+                    </div>
                 </div>
+                <div class="project-card">
+                    <h3>Enhancing GAN Stability and Image Quality: A Comparative Study of GAN Variants for Image Generation</h3>
+                    <p style="padding: 0.5rem 0; color: #666">Implemented and compared three GAN variants (Baseline GAN, DCGAN, WGAN-GP) for generating images of handwritten digits (MNIST) and faces (CelebA) using PyTorch. Evaluated models using Fréchet Inception Distance (FID) score and visual inspection, achieving a best FID score with WGAN-GP on CelebA. Conducted experiments to improve training stability, including hyperparameter tuning and label smoothing, resulting in insights on mitigating mode collapse.</p>
+                    <div style="font-size: 15px; display: flex; width: 15%; justify-content: space-between; text-decoration: underline; padding-top: 0.3rem;">
+                        <p><a href="https://github.com/Tameem786/gan_project" target="_blank">Code</a></p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Deep Q-Learning for MountainCar-v0</h3>
+                    <p style="padding: 0.5rem 0; color: #666">Designed and implemented a Deep Q-Network (DQN) using PyTorch to train an agent for the MountainCar-v0 environment in Gymnasium. Optimized the training process with experience replay, target network updates, and epsilon-greedy exploration. Achieved efficient learning by fine-tuning hyperparameters, enabling the agent to solve the environment consistently. Incorporated reward shaping and checkpointing for progress monitoring, and utilized TensorBoard for performance visualization.</p>
+                    <div style="font-size: 15px; display: flex; width: 15%; justify-content: space-between; text-decoration: underline; padding-top: 0.3rem;">
+                        <p><a href="https://github.com/Tameem786/pythonProject-RL/blob/master/lab-2.py" target="_blank">Code</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="projects">
+                <h2>Photo Gallery</h2>
+                <hr>
+                Working on it!
             </div>
         </div>
     </div>
